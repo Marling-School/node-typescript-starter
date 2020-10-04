@@ -2,14 +2,32 @@
   "name": "typescript-starter",
   "version": "1.0.0",
   "description": "An empty project for experimenting with TypeScript development on the school computers",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=12.16.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "github.com:Marling-School/typescript-starter.git"
   },
   "author": "Mr Joe Sharp",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "winston": "^3.3.3"
+  }
 }
