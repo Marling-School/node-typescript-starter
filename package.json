@@ -1,0 +1,15 @@
+{
+  "name": "typescript-starter",
+  "version": "1.0.0",
+  "description": "An empty project for experimenting with TypeScript development on the school computers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com:Marling-School/typescript-starter.git"
+  },
+  "author": "Mr Joe Sharp",
+  "license": "ISC"
+}
